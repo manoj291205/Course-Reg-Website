@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="hc">
+            <img src="Logo.jpg" alt="Logo" width="200" class="limg">
+            <div class="tc">
+                <h1>Company Profile</h1>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">Company Profile</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="learning.html">Interactive Learning</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="feedback.html">Feedback & Contact Us</a></li>
+                <li><a href="tv_parts.html">TV Internal Parts</a></li>
+                <li><a href="mobile_parts.html">Mobile Internal Parts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box" style="padding: 40px; text-align: center;">
+            <br>
+            <marquee behavior="scroll" direction="left" style="font-weight: bold; color: #4A90E2;">Word of the Day: Capacitor</marquee>
+            <br>
+
+            <h2>About Us</h2>
+            <p>MKS Electronics is a leading platform dedicated to demystifying electronic devices.<br>We provide comprehensive learning resources, including in-depth courses, <br>to help you understand the inner workings of electronics.</p>
+            
+            <br>
+            
+            <h2>Our Mission</h2>
+            <p>To empower individuals with comprehensive, hands-on learning in the field of electronics.<br>At MKS Electronics, we aim to provide top-quality courses designed to equip students and professionals<br>with the skills and knowledge needed to excel in the ever-evolving electronics industry.</p>
+            
+            <br>
+            
+            <h2>Our Team</h2>
+            <table style="width: 80%; margin: 0 auto; border-collapse: collapse; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                <tr style="background-color: #4A90E2; color: white;">
+                    <th style="padding: 15px;">Name</th>
+                    <th style="padding: 15px;">Role</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Jaden Park</td>
+                    <td style="padding: 12px;">Founder</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Manoj Kumar</td>
+                    <td style="padding: 12px;">Lead Instructor</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Joe Grey</td>
+                    <td style="padding: 12px;">Course Developer</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MKS Electronics</p>
+    </footer>
+
+    <script>
+        const tableRows = document.querySelectorAll("table tr");
+
+        tableRows.forEach((row, index) => {
+            if (index === 0) return; 
+
+            row.addEventListener("mouseover", () => {
+                row.style.backgroundColor = "#f0f0f0";
+                row.style.transition = "background-color 0.3s ease";
+                row.style.transform = "scale(1.02)";
+                row.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+            });
+
+            row.addEventListener("mouseout", () => {
+                row.style.backgroundColor = "";
+                row.style.transform = "scale(1)";
+                row.style.boxShadow = "none";
+            });
+        });
+    </script>
+</body>
+</html>

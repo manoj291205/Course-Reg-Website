@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hc">
+            <img src="Logo.jpg" alt="Logo" width="200" class="limg">
+            <div class="tc">
+                <h1>Course Registration</h1>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">Company Profile</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="learning.html">Interactive Learning</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="feedback.html">Feedback & Contact Us</a></li>
+                <li><a href="tv_parts.html">TV Internal Parts</a></li>
+                <li><a href="mobile_parts.html">Mobile Internal Parts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box">
+            <h2>Register for a Course</h2>
+            
+            <form id="registrationForm" class="personal-info" action="#" method="post">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br><br>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br><br>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="10 digits" required><br><br>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="0" max="120" required><br><br>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br><br>
+                
+                <label for="education">Educational Background:</label>
+                <input type="text" id="education" name="education" required><br><br>
+                
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="tv">TV Internal Parts</option>
+                    <option value="mobile">Mobile Internal Parts</option>
+                </select><br><br>
+                
+                <input type="submit" value="Register" class="submit-btn">
+            </form>
+
+            <div id="registrationMessage" class="result-box" style="display: none;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MKS Electronics</p>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const gender = document.getElementById("gender").value;
+            const location = document.getElementById("location").value.trim();
+            const education = document.getElementById("education").value.trim();
+            const course = document.getElementById("course").value;
+
+            const nameRegex = /^[A-Za-z\s]+$/;
+            const phoneRegex = /^[0-9]{10}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const ageNum = parseInt(age);
+
+            let errorMessage = "";
+
+            if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+                errorMessage += "❌ Please enter a valid name (letters only).<br>";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMessage += "❌ Please enter a valid email address.<br>";
+            }
+
+            if (!phoneRegex.test(phone)) {
+                errorMessage += "❌ Please enter a valid 10-digit phone number.<br>";
+            }
+
+            if (isNaN(ageNum) || ageNum <= 0 || ageNum > 120) {
+                errorMessage += "❌ Please enter a valid age (between 1 and 120).<br>";
+            }
+
+            if (gender === "") {
+                errorMessage += "❌ Please select a gender.<br>";
+            }
+
+            if (location === "" || education === "") {
+                errorMessage += "❌ Please fill out all fields.<br>";
+            }
+
+            const registrationMessage = document.getElementById("registrationMessage");
+
+            if (errorMessage) {
+                registrationMessage.innerHTML = `<p style="color: red;">${errorMessage}</p>`;
+                registrationMessage.style.backgroundColor = "#FFDDDD";
+                registrationMessage.style.display = "block";
+                return;
+            }
+
+            registrationMessage.innerHTML = `<p>✅ Thank you, ${firstName} ${lastName}! You have successfully registered for the <strong>${course}</strong> course.</p>`;
+            registrationMessage.style.backgroundColor = "#50E3C2";
+            registrationMessage.style.display = "block";
+
+            document.getElementById("registrationForm").reset();
+        });
+    </script>
+</body>
+</html>

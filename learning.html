@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="hc">
+            <img src="Logo.jpg" alt="Logo" class="limg">
+            <div class="tc">
+                <h1>Interactive Learning</h1>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">Company Profile</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="learning.html">Interactive Learning</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="feedback.html">Feedback & Contact Us</a></li>
+                <li><a href="tv_parts.html">TV Internal Parts</a></li>
+                <li><a href="mobile_parts.html">Mobile Internal Parts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box">
+            <h2>Explore Our Courses</h2>
+            <p>Choose a course to learn about the internal parts and working of electronic devices.</p>
+            
+            <div class="course-list" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                <div class="course-item" style="width: 45%; background: #f4f4f4; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; text-align: center;">
+                    <h3>TV Internal Parts</h3>
+                    <p>Learn about the components inside a TV and how they work.</p>
+                    <a href="tv_parts.html"><button class="course-btn" style="background-color: #4A90E2; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Learn More</button></a>
+                </div>
+
+                <div class="course-item" style="width: 45%; background: #f4f4f4; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; text-align: center;">
+                    <h3>Mobile Internal Parts</h3>
+                    <p>Understand the internal components of a mobile phone.</p>
+                    <a href="mobile_parts.html"><button class="course-btn" style="background-color: #4A90E2; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MKS Electronics</p>
+    </footer>
+
+    <script>
+        const courseButtons = document.querySelectorAll(".course-btn");
+
+        courseButtons.forEach(button => {
+            button.addEventListener("mouseover", () => {
+                button.style.backgroundColor = "#357ABD";
+                button.style.transform = "scale(1.05)";
+                button.style.transition = "0.3s";
+            });
+
+            button.addEventListener("mouseout", () => {
+                button.style.backgroundColor = "#4A90E2";
+                button.style.transform = "scale(1)";
+            });
+        });
+    </script>
+</body>
+</html>

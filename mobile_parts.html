@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Internal Parts Course</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="hc">
+            <img src="Logo.jpg" alt="Logo" class="limg">
+            <div class="tc">
+                <h1>Mobile Internal Parts Course</h1>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">Company Profile</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="learning.html">Interactive Learning</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="feedback.html">Feedback & Contact Us</a></li>
+                <li><a href="tv_parts.html">TV Internal Parts</a></li>
+                <li><a href="mobile_parts.html">Mobile Internal Parts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box">
+            <h2>Mobile Internal Parts Course</h2>
+            
+            <div class="img-container">
+                <img src="mobile_internal.jpg" alt="Mobile Internal Parts" class="animated-img">
+            </div>
+
+            <p>This course dives into the internal components of a mobile phone and how they work together to provide seamless functionality.</p>
+            
+            <h3>What You'll Learn:</h3>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Battery</td>
+                    <td>Types of batteries and power management.</td>
+                </tr>
+                <tr>
+                    <td>Processor (CPU)</td>
+                    <td>The brain of the phone, handling all computations.</td>
+                </tr>
+                <tr>
+                    <td>Camera Modules</td>
+                    <td>How cameras capture images and videos.</td>
+                </tr>
+                <tr>
+                    <td>Display Technology</td>
+                    <td>AMOLED, LCD, and OLED screens.</td>
+                </tr>
+            </table>
+            
+            <h3>Course Duration:</h3>
+            <p>4 weeks (2 hours per session, 2 sessions per week)</p>
+            
+            <h3>Average Price:</h3>
+            <p>8999 Rs (Includes course materials and certification)</p>
+            
+            <a href="registration.html">
+                <button class="enroll-btn">Enroll Now</button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MKS Electronics</p>
+    </footer>
+
+    <script>
+        const enrollBtn = document.querySelector(".enroll-btn");
+        enrollBtn.addEventListener("mouseover", () => {
+            enrollBtn.style.transform = "scale(1.1)";
+        });
+        enrollBtn.addEventListener("mouseout", () => {
+            enrollBtn.style.transform = "scale(1)";
+        });
+
+        const img = document.querySelector('.animated-img');
+        img.addEventListener("mouseover", () => {
+            img.style.transform = "scale(1.05)";
+            img.style.transition = "transform 0.5s ease";
+        });
+        img.addEventListener("mouseout", () => {
+            img.style.transform = "scale(1)";
+        });
+    </script>
+</body>
+</html>

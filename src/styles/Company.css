@@ -1,0 +1,490 @@
+.company-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 180px;
+  background-color: #f5f5f5;
+}
+
+.word-of-day {
+  background-color: #4A90E2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.word-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.word-container h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.word-container p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+}
+
+.company-box {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-content h3 {
+  color: #4A90E2;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #4A90E2;
+  padding-bottom: 0.5rem;
+}
+
+.company-content p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.company-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-info h3 {
+  color: #4A90E2;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #4A90E2;
+  padding-bottom: 0.5rem;
+}
+
+.company-info p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.company-info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.company-info li {
+  color: #333;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.company-info li:before {
+  content: "•";
+  color: #4A90E2;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-cell {
+  padding: 1.5rem;
+  vertical-align: top;
+  border: 1px solid #dee2e6;
+}
+
+.table-cell h3 {
+  color: #4A90E2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #4A90E2;
+  padding-bottom: 0.5rem;
+}
+
+.table-cell p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.table-cell ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.table-cell li {
+  color: #333;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.table-cell li:before {
+  content: "•";
+  color: #4A90E2;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.course-info {
+  margin-top: 1.5rem;
+}
+
+.course-info h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.course-info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.course-info li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.course-info li:before {
+  content: "•";
+  color: #4A90E2;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.course-info strong {
+  color: #4A90E2;
+}
+
+.course-details {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.course-details p {
+  margin-bottom: 0.5rem;
+}
+
+.enroll-button {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.enroll-link {
+  display: inline-block;
+  background-color: #4A90E2;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.enroll-link:hover {
+  background-color: #357ABD;
+}
+
+/* Reuse header and footer styles from Assessment.css */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title-container {
+  flex: 1;
+  text-align: center;
+  margin-left: -200px;
+}
+
+.title-container h1 {
+  margin: 0;
+  color: #333;
+  white-space: nowrap;
+}
+
+.main-nav {
+  margin-top: 1rem;
+  background-color: #4A90E2;
+  padding: 0.5rem 0;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: #357ABD;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.scrolling-text {
+  background-color: #4A90E2;
+  color: white;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.scrolling-text marquee {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-table thead {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.course-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.course-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.course-table tr:last-child td {
+  border-bottom: none;
+}
+
+.course-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.course-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Learning Features Styles */
+.learning-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+  color: #4A90E2;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Feedback Section Styles */
+.feedback-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feedback-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.student-name {
+  font-weight: bold;
+  color: #4A90E2;
+  font-size: 1.1rem;
+}
+
+.feedback-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.feedback-text {
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+.company-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+}
+
+.company-section p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #34495e;
+  line-height: 1.6;
+} 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Electronic Devices Learning</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="hc">
+            <img src="Logo.jpg" alt="Logo" width="200" class="limg">
+            <div class="tc">
+                <h1>Welcome to MKS Electronics</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login.html" class="button">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="company.html">Company Profile</a></li>
+                <li><a href="registration.html">Course Registration</a></li>
+                <li><a href="learning.html">Interactive Learning</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="feedback.html">Feedback & Contact Us</a></li>
+                <li><a href="tv_parts.html">TV Internal Parts</a></li>
+                <li><a href="mobile_parts.html">Mobile Internal Parts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box" style="text-align: center; padding: 40px;">
+            <h2>About This Website</h2>
+            <p>Learn about the internal parts and working of electronic devices like TVs and Mobiles.</p>
+            
+            <img src="Logo.jpg" alt="Logo" width="200" style="margin: 20px 0;"><br>
+
+            <a href="learning.html"><button class="explore-btn" style="background-color: #4A90E2; color: white; padding: 12px 30px; border: none; cursor: pointer; font-size: 16px; transition: 0.3s;">Explore Courses</button></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MKS Electronics</p>
+    </footer>
+
+    <script>
+        const exploreBtn = document.querySelector(".explore-btn");
+
+        exploreBtn.addEventListener("mouseover", () => {
+            exploreBtn.style.backgroundColor = "#357ABD";
+            exploreBtn.style.transform = "scale(1.05)";
+        });
+
+        exploreBtn.addEventListener("mouseout", () => {
+            exploreBtn.style.backgroundColor = "#4A90E2";
+            exploreBtn.style.transform = "scale(1)";
+        });
+    </script>
+</body>
+</html>
